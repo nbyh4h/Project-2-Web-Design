@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Website</title>
+	<script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body background="images/gambar2.jpg">
+ <header>
+    <br>
+		<div class="menu-section">
+		<img src="images/logoPharmacy1.png" alt="Logo Pharmacy">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="service.html">Service</a>
+				<a href="product.html">Product</a>
+				<a href="contact us.html">Contact Us</a>
+				<div class="search">
+                <input type="text" name="search" id="search" placeholder="Search this website">
+                </div>
+	</br>
+		</div>
+ </header>
+	
+<main>
+
+<div class="font1">
+            <h1>Healthcare for Family's Health</h1>
+	        </div>
+  
+<body>
+
+
+<div class="slideshow-container">
+  <div class="mySlides">
+    <img src="images/slideshow 1.jpg" alt="slideshow 1">
+  </div>
+
+  <div class="mySlides">
+    <img src="images/slideshow 2.jpg" alt="slideshow 2">
+  </div>
+
+  <div class="mySlides">
+    <img src="images/slideshow 3.jpg" alt="slideshow 3">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<br><br>
+
+<script>
+let slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+ </script>
+
+    <div>
+    <div class="font2">
+        <h4 class="word3"> Welcome to our new pharmacy. We dispense medication, offer healthcare advice 
+        and specialists in prescription collection & delivery.</h4>
+    </div>
+
+    <form action="product.html">
+        <button type="submit">Order Now!</button>
+    </form>
+    <br></br>
+
+    <div class="voucher">
+        <h3>Up to 40% Off All Dietary Supplements</h3>
+        <h4>Only On Your First Order</h4>
+    </div>
+    </br>
+    <div class="voucher-container">
+        <div class="voucher2">
+            <h3>Free Delivery</h3>
+            <h4>on order above RM80</h4>
+        </div>
+        <br></br>
+
+        <div class="featured">
+            <h2 class="title-heading">OUR <span class="text">FEATURED</span></h2>
+
+            <div class="circle-container">
+                <div class="circle">
+                    <p>Personal care</p>
+                </div>
+                <div class="circle">
+                    <p>Baby care</p>
+                </div>
+                <div class="circle">
+                    <p>Nutrition</p>
+                </div>
+                <div class="circle">
+                    <p>Medicine</p>
+                </div>
+                <div class="circle">
+                    <p>Consult</p>
+                </div>
+            </div>
+
+            <div class="box-container">
+                <div class="box">
+                    <h3>Easy Access</h3>
+                    <p>Our used to conduct an on-line message.</p>
+                </div>
+
+                <div class="box">
+                    <h3>Health News</h3>
+                    <p>An analysis of the facts behind the health stories that are making the news.</p>
+                </div>
+
+                <div class="box">
+                    <h3>Our Service</h3>
+                    <p>We offer a range of instore services to help with your healthcare needs.</p>
+                </div>
+            </div>
+            <br></br>
+        </div>
+    </div>
+
+    <div class="date-time-greeting">
+        <p id="date-time"></p>
+        <p id="greeting"></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Nabihah, Farzana, Syamila, 'Irdhina. All rights reserved.</p>
+    </footer>
+</main>
+<script>
+function updateDateTime() {
+    var dateTimeContainer = document.getElementById("date-time");
+    var greetingContainer = document.getElementById("greeting");
+
+    var now = new Date();
+    var hours = now.getHours();
+
+    var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var currentDay = dayNames[now.getDay()];
+
+    var formattedDate = now.toLocaleDateString();
+    var formattedTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    var emoji = hours < 12 ? "🌞" : "🌙"; 
+    var greeting = hours < 12 ? "Good morning" : "Good evening";
+
+    dateTimeContainer.textContent = currentDay + ", " + formattedDate + " " + formattedTime;
+    greetingContainer.textContent = greeting + " " + emoji;
+}
+
+updateDateTime();
+setInterval(updateDateTime, 1000); // Update time every second
+</script>
+</body>
+</html>
+

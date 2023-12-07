@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Website</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Adjust the gap between products as needed */
+        }
+
+        .product {
+            flex: 0 1 calc(30% - 20px); /* Two products in a row with 20px gap */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <br>
+    <div class="menu-section">
+        <img src="images/logoPharmacy1.png" alt="Logo Pharmacy">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="service.html">Service</a>
+        <a href="product.html">Product</a>
+        <a href="contact us.html">Contact Us</a>
+        <div class="search">
+            <input type="text" name="search" id="search" placeholder="Search this website">
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <!-- Product 1 -->
+        <div class="product" data-availability="true">
+            <img src="images/Triticum.png" alt="Triticum">
+            <h3>Triticum Aestivum Lemon With Honey - Antioxidant Food (3x 4g)</h3>
+			<h4>Price: RM12.90</h4> 
+			<button onclick="toggleDescription(this)">Description</button>
+            <div class="description" style="display: none;">
+                <p>Triticum Aestivum Lemon with Honey is formulated using the cross-winter
+				and tray farming technology from Australia, 100% whole wheatgrass
+				(from the shoot to the roots) is used to retain the high nutritional value in it.</p>
+            </div>                     
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product" data-availability="true">
+            <img src="images/Relief Cream.png" alt="Relief Cream">
+            <h3>DD EZ Relief Cream (for Dry, Itchy Skin) 15ml</h3>
+			<h4>Price: RM12.00</h4>
+			<button onclick="toggleDescription(this)">Description</button>
+            <div class="description" style="display: none;">
+            <p>DD Ez Relief Cream is the best cream for dry and itchy skin. In addition,
+            it is suitable for both children and adults. It is formulated in Europe,
+            complying to European Pharmacopoeia (Ph. Eur.) official standard.</p>               
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product" data-availability="true">
+            <img src="images/Metabolic.png" alt="Metabolic">
+            <h3>Metabolic + Oteine Protein Drink (350g)</h3>
+			<h4>Price: RM69.00</h4>
+			<button onclick="toggleDescription(this)">Description</button>
+            <div class="description" style="display: none;">
+            <p>Metabolic + Oteine is a modular nutrition that provides essential protein
+            support to individuals who have insufficient protein intake or 
+            who need higher protein requirements.</p>                                   
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product" data-availability="false">
+            <img src="images/OMRON.png" alt="OMRON">
+            <h3>OMRON Intelli Wrap (Fit Cuff) Type B (22-42cm) HEM-FL31</h3>
+			<h4>Price: RM78.50</h4>
+			<button onclick="toggleDescription(this)">Description</button>
+            <div class="description" style="display: none;">
+            <p>Please take note: This is only a cuff and does not come with BP Monitor
+            Fits arm circumference 22-42cm.
+            <p>Suitable for models HEM-7156, HEM-7156T-AP, HEM-7361T</p>
+            </div>
+            <button>Out of Stock</button>
+        </div>
+		
+		<!-- Product 5 -->
+        <div class="product" data-availability="true">
+            <img src="images/FLAVETTES.png" alt="FLAVETTES">
+            <h3>Flavettes Effevescent Glow Tab 30S</h3>
+			<h4>Price: RM69.90</h4>
+			<button onclick="toggleDescription(this)">Description</button>
+            <div class="description" style="display: none;">
+            <p>Flavettes Effervescent Glow 30's is a health supplement for the maintenance of good </p>
+            <p>health with Vitamin C, Vitamin E, and Glutathione. Flavettes Effervescent Glow contains </p>
+            <p>high dose Vitamin C added with Vitamin E and Glutathione helps to boost your skin complexion </p>
+			<p>because these are powerful antioxidant properties to fight against free radicals that cause aging.</p>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+		
+		<!-- Product 6 -->
+        <div class="product" data-availability="true">
+            <img src="images/CETAPHIL.png" alt="CETAPHIL">
+            <h3>Cetaphil Baby Daily Lotion 400ml</h3>
+			<h4>Price: RM88.00</h4>
+			<button onclick="toggleDescription(this)">Description</button>
+            <div class="description" style="display: none;">
+            <p>Nourish and soothe baby’s delicate skin with this gentle lotion tested by dermatologists.
+            Keeps your baby’s delicate skin hydrated for 24 hours. Soothes, softens skin and improves skin texture.
+            Dermatologically tested  and clinically proven to be gentle on sensitive skin. </p>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+		
+		<!-- Product 7 -->
+        <div class="product" data-availability="false">
+            <img src="images/CHIASEEDS.png" alt="CHIASEEDS">
+            <h3>Love Earth Organic Chia Seeds 168G Extra 20% (202G)</h3>
+			<h4>Price: RM18.50</h4>
+			<button onclick="toggleDescription(this)">Description</button>
+            <div class="description" style="display: none;">
+            <p>8 times more Omega-3 than Salmon, 15 times more magnesium than Broccoli,
+            5 times more calcium than Milk, 3 times more antioxidant than Blueberries.</p>
+            </div>
+            <button>Out of Stock</button>
+        </div>
+		
+		<!-- Product 8 -->
+        <div class="product" data-availability="false">
+            <img src="images/Herbal_Essences.png" alt="Herbal_Essences">
+            <h3>Herbal Essences Shampoo Repair Moroccan Argan Oil 400Ml</h3>
+			<h4>Price: RM30.90</h4>
+			<button onclick="toggleDescription(this)">Description</button>
+            <div class="description" style="display: none;">
+            <p>Crafted with our signature blend of real botanicals, Argan Oil Shampoo 
+			cleanses and helps repair for smooth, beautiful hair. This color-safe shampoo is pH-balanced, 
+			and gently cleanses while infusing notes of fizzy citrus, exotic spices and creamy vanilla into 
+			your hair leaving it soft and smooth.</p>
+            </div>
+            <button>Out of Stock</button>
+        </div>
+		
+		<!-- Product 9 -->
+        <div class="product" data-availability="true">
+            <img src="images/Oxy.png" alt="Oxy">
+            <h3>Oxy Oil Control Film 50s</h3>
+			<h4>Price: RM11.50</h4>
+			<button onclick="toggleDescription(this)">Description</button>
+            <div class="description" style="display: none;">
+            <p>Unique micropores film with superior oil absorption power.
+			 Remove excess oil instantly while maintaining the skin’s moisture.
+			 Soft texture, removes shine and stickiness, leaving skin fresh and clean.
+			 Does not affect make-up and does not irritate the skin, suitable for all skin types.
+			 After use, the film will become transparent but its absorbency will not be affected. </p>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+		
+		<!-- Product 10 -->
+        <div class="product" data-availability="true">
+            <img src="images/CHAMPS.png" alt="CHAMPS">
+            <h3>Champs Effervencent Mulitvitamine Lysine & Pebiotic (Orange) 30s Twinpack</h3>
+			<h4>Price: RM56.50</h4>
+			<button onclick="toggleDescription(this)">Description</button>
+            <div class="description" style="display: none;">
+            <p>This health supplement is for the maintenance of good health. Avoid nutrient deficiencies.
+			Faster and better nutrient absorption with the effervescent format. Lysine to promote children's 
+			optimum growth and Prebiotic to support digestive health. </p>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2023 Nabihah, Farzana, Syamila, 'Irdhina. All rights reserved.</p>
+</footer>
+
+<script>
+    function toggleDescription(button) {
+        var product = button.closest(".product");
+        var description = product.querySelector(".description");
+        description.style.display = (description.style.display === "none" || description.style.display === "") ? "block" : "none";
+    }
+
+    var productElements = document.querySelectorAll(".product");
+
+    productElements.forEach(function(productElement) {
+        var isAvailable = productElement.getAttribute("data-availability") === "true";
+        var addButton = productElement.querySelector("button:not([onclick])"); // Exclude buttons with onclick attribute
+
+        addButton.addEventListener("click", function() {
+            if (isAvailable) {
+                alert("Product added to cart!");
+            } else {
+                alert("Sorry, this product is currently out of stock. We will notify you once it's available.");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
+

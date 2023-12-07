@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Website</title>
+	<script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body background="images/gambar2.jpg">
+    <header>
+        <br>
+        <div class="menu-section">
+            <img src="images/logoPharmacy1.png" alt="Logo Pharmacy">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="service.html">Service</a>
+            <a href="product.html">Product</a>
+            <a href="contact us.html">Contact Us</a>
+            <div class="search">
+                <input type="text" name="search" id="search" placeholder="Search this website">
+            </div>
+        </div>
+        </br>
+    </header>
+    <main>
+        <div class="title">
+            <h1>Contact us</h1>
+        </div>
+
+        <br></br>
+
+        <!-- Member Registration Form -->
+		
+        <form class="registration-form">
+            <h2>Member Registration</h2>
+
+            <div class="form-group">
+                <label for="email">Full Name</label>
+                <input type="email" id="full name" name="full name" placeholder="Full Name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">User Name </label>
+                <input type="email" id="username" name="username" placeholder="Username">
+            </div>
+
+            <div class="form-group">
+                <label for="date-of-birth">Date of Birth</label>
+                <input type="date" id="date-of-birth" name="date-of-birth">
+            </div>
+            <div class="form-group">
+                <label for="mobile-number">Phone Number</label>
+                <input type="tel" id="mobile-number" name="mobile-number" placeholder="Mobile Number">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+         <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Email" oninput="validateEmail(this)" required>
+    <div id="emailError" class="error-message"></div>
+</div>
+</head>
+<body>
+
+<div class="form-group">
+    <label for="password">Password</label>
+    <div class="password-input">
+        <input type="password" id="password" name="password" placeholder="Enter your password" oninput="validatePassword(this)" required>
+       
+    </div>
+    <div id="passwordError" class="error-message"></div>
+</div>
+
+<div class="form-group">
+    <label for="confirmPassword">Confirm Password</label>
+    <div class="password-input">
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" oninput="validateConfirmPassword()" required>
+        <div class="password-icon" onclick="togglePasswordVisibility('confirmPassword')">
+            <i class="fas fa-eye-slash"></i>
+        </div>
+    </div>
+    <div id="confirmPasswordError" class="error-message"></div>
+</div>
+
+</body>
+</html>
+
+
+            <button type="button" onclick="submitForm()">Register</button>
+        </form>
+        <br></br>
+
+   <div class="contact-buttons">
+    <button class="contact-button" id="whatsappButton">
+        <b>Whatsapp Us</b>
+    </button>
+
+    <button class="contact-button" id="emailButton">
+        <b>Email Us</b>
+    </button>
+
+    <button class="contact-button" id="callButton">
+        <b>Call Us</b>
+    </button>
+</div>
+
+<script>
+    // Update date and time function (replace this with your actual implementation)
+    function updateDateTime() {
+        var currentDateTime = new Date();
+        // Implement your logic to display or update the date and time
+    }
+
+    // Set interval to update date and time every second
+    setInterval(updateDateTime, 1000);
+
+    // jQuery document ready function
+    $(document).ready(function () {
+        $('#whatsappButton').click(function () {
+            var phoneNumber = "0197409461";
+            var message = "Hello, I am contacting you regarding...";
+            window.open('https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message));
+        });
+
+        $('#emailButton').click(function () {
+            var email = "info@example.com";
+            window.location.href = 'mailto:' + email;
+        });
+
+        $('#callButton').click(function () {
+            var phoneNumber = "123-456-7890";
+            window.open('tel:' + phoneNumber);
+        });
+    });
+</script>
+
+<br></br>
+
+        <footer>
+            <p>&copy; 2023 Nabihah, Farzana, Syamila, 'Irdhina. All rights reserved.</p>
+        </footer>
+    </main>
+</body>
+
+</html>

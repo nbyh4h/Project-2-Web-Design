@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Pharmacy Website</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	</head>
+	<body>
+		<header>
+			<br>
+			<div class="menu-section">
+				<img src="images/logoPharmacy1.png" alt="Logo Pharmacy">
+				<a href="index.html" class="active">Home</a>
+				<a href="about.html">About Us</a>
+				<a href="service.html">Service</a>
+				<a href="product.html">Product</a>
+				<a href="contact us.html">Contact Us</a>
+				<div class="search">
+					<input type="text" name="search" id="search" placeholder="Search this website">
+				</div>
+				</br>
+			</div>
+		</header>
+		
+		<main>
+			<div class="title">
+				<h1>About Us</h1>
+			</div>
+			
+			<div class="aboutUs-section">
+				<div class="font4">
+					<div class="subheading">
+						<h3>Our History</h3>
+						<img src="images/aboutUs1.jpg" alt="Photo Contact" style="max-width: 400px; height: auto;">
+					</div>
+					
+					<p>Established in 1995, Medi Health & Care has been serving the healthcare needs of the Malaysian community for over two decades.</p>
+					<p>We take pride in our journey, which began as a small neighborhood pharmacy and has since grown to become a reliable healthcare </p> 
+					<p>partner for people from all walks of life. Our commitment to providing top-notch pharmaceutical services and products has earned</p>
+					<p>us the trust and loyalty of our valued customers.</p>
+					
+					
+					<div class="collapsible">
+					<div class="subheading">
+					<h3>Our Vission</h3>
+					</div>
+						<img src="images/vission.png" alt="Photo Contact">
+						<div class="collapsible-header"><i class="fas fa-plus"></i>Our Vission</div>
+						<div class="content">
+							<p>At Medi Health & Care, our vision is to be the leading pharmacy in Malaysia, recognized for our unwavering dedication to the</p>
+							<p>well-being of our community. We aspire to be the first choice for healthcare solutions, embracing innovation and technology to </p>
+							<p>enhance the quality of life for our customers.</p>
+						</div>
+					</div>
+					
+					<div class="collapsible">
+						<div class="subheading">
+							<h3>Our Mission</h3>
+							<img src="images/mission.png" alt="Photo Contact">
+						</div>
+						<div class="collapsible-header"><i class="fas fa-plus"></i>Our Mission</div>
+						<div class="content">
+							<p>Our mission is to provide accessible, affordable, and personalized healthcare services to every individual who walks through our doors.</p>
+							<p>We are committed to delivering excellence in pharmaceutical care, ensuring the health and happiness of our community.</p>
+							<p>To achieve this, we focus on:</p>
+							
+							<!-- Collapsible sections within "Our Mission" -->
+							<div class="collapsible">
+								<div class="collapsible-header"><i class="fas fa-plus"></i>Quality</div>
+								<div class="content">
+									<p>We are dedicated to offering high-quality pharmaceutical products and services, ensuring the health and safety of our customers.</p>
+								</div>
+							</div>
+							
+							<div class="collapsible">
+								<div class="collapsible-header"><i class="fas fa-plus"></i>Customer-Centric Approach</div>
+								<div class="content">
+									<p>We prioritize our customers' needs, providing expert advice, and fostering strong relationships based on trust and respect.</p>
+								</div>
+							</div>
+							
+							<div class="collapsible">
+								<div class="collapsible-header"><i class="fas fa-plus"></i>Community Involvement</div>
+								<div class="content">
+									<p>We actively engage with the community through health awareness programs and initiatives, contributing to a healthier society.</p>
+								</div>
+							</div>
+							
+							<div class="collapsible">
+								<div class="collapsible-header"><i class="fas fa-plus"></i>Innovation</div>
+								<div class="content">
+									<p>We continuously seek innovative solutions to better serve our customers and stay at the forefront of healthcare trends.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="collapsible">
+						<div class="subheading">
+							<h3>Core Values</h3>
+							<img src="images/value.png" alt="Photo Contact">
+						</div>
+						<div class="collapsible-header"><i class="fas fa-plus"></i>Core Values</div>
+						<div class="content">
+							<p>At the heart of our pharmacy, we hold these core values dear:</p>
+							
+							<div class="collapsible">
+								<div class="collapsible-header"><i class="fas fa-plus"></i>Customer Service Excellence</div>
+								<div class="content">
+									<p>We are unwavering in our commitment to providing exceptional customer service.</p>
+									<p>Your health and well-being are our top priorities, and we consistently strive to exceed your expectations.</p>
+								</div>
+							</div>
+							
+							<!-- Collapsible sections for other core values -->
+							<div class="collapsible">
+								<div class="collapsible-header"><i class="fas fa-plus"></i>Professionalism</div>
+								<div class="content">
+									<p>Our team of pharmacists and staff are well-trained and committed to upholding the highest standards of professionalism, expertise, and service.</p>
+								</div>
+							</div>
+							
+							<div class="collapsible">
+								<div class="collapsible-header"><i class="fas fa-plus"></i>Compassion</div>
+								<div class="content">
+									<p>We approach our customers with empathy and understanding, recognizing the importance of a caring touch in healthcare.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<footer>
+				<p>&copy; 2023 Nabihah, Farzana, Syamila, 'Irdhina. All rights reserved.</p>
+			</footer>
+			
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<script>
+				$(document).ready(function() {
+					$('.collapsible-header').click(function(event) {
+						event.stopPropagation();
+						var content = $(this).next('.content');
+						if (content.is(':visible')) {
+							content.slideUp();
+							} else {
+							$(this).parent().siblings().find('.content').slideUp();
+							$(this).parent().siblings().find('.collapsible-header').removeClass('active');
+							$(this).addClass('active');
+							content.slideDown();
+						}
+					});
+				});
+			</script>
+		</main>
+	</body>
+</html>
